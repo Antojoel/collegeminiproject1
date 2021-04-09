@@ -3,9 +3,17 @@ import pywhatkit
 from instabot import Bot
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+
 import time
+
+import smtplib
+
+def email(username,password,touser,message):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(username,password)
+    server.sendmail(username,password, message)
 
 
 def whats_app(number, message, hour, minute):
@@ -50,10 +58,11 @@ def twitter(message):
     driver.find_element_by_xpath(message_xpath).send_keys(message)
     time.sleep(0.5)
     driver.find_element_by_xpath(send_xpath).click()
+    time.sleep(120)
 
 def instagram(Username,Password,picture,Caption):
     bot = Bot()
-    bot.login(username=Username, password=Password)
+    bot.login(Username,Password)
 
-    bot.upload_photo(picture, caption=Caption)
+    bot.upload_photo(picture,Caption)
 
