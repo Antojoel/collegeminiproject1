@@ -1,5 +1,5 @@
 import pywhatkit
-
+import os
 from instabot import Bot
 
 from selenium import webdriver
@@ -60,9 +60,12 @@ def twitter(message):
     driver.find_element_by_xpath(send_xpath).click()
     time.sleep(120)
 
-def instagram(Username,Password,picture,Caption):
-    bot = Bot()
-    bot.login(Username,Password)
+def instagram(Username,Password,picture,caption):
 
-    bot.upload_photo(picture,Caption)
+    bot = Bot()
+    bot.login(username =f"{Username}",password = f"{Password}")
+    bot.upload_photo(f"{picture}",f"{caption}")
+
+
+
 
