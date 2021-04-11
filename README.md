@@ -1,2 +1,0 @@
-# collegeminiproject1
-collegeminiproject

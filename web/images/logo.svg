@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="156"
+   height="60"
+   viewBox="0 0 41.274999 15.875004"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Blur"
+       id="filter977">
+      <feGaussianBlur
+         stdDeviation="1.34 2.22"
+         result="blur"
+         id="feGaussianBlur975" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1359"
+       x="-0.083972313"
+       width="1.1679446"
+       y="-0.058731984"
+       height="1.1174639">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.86003392"
+         id="feGaussianBlur1361" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="60.694205"
+     inkscape:cy="36.745895"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g840"
+       transform="translate(-1.6704345,-1.403165)">
+      <path
+         style="opacity:0.8625;fill:#333333;stroke:none;stroke-width:0.172985px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter1359)"
+         d="m 49.183429,109.37187 2.77139,-35.144078 21.80911,25.543216 c -9.108568,-5.49343 -17.935037,-8.30672 -24.5805,9.600862 z"
+         id="path837"
+         sodipodi:nodetypes="cccc"
+         transform="matrix(0.38475225,0,0,0.38475225,-15.309854,-25.381373)" />
+      <path
+         style="fill:#00bfd8;fill-opacity:1;stroke:none;stroke-width:0.0665564px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 4.1277444,16.6997 5.1940429,3.1779366 13.585147,13.005747 C 10.080605,10.892137 6.6846012,9.809717 4.1277444,16.6997 Z"
+         id="path839"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <path
+       d="m 12.394961,11.801476 h 1.499668 L 9.7459114,2.7979922 H 9.6638128 L 5.5150953,11.801476 H 7.0147636 L 7.6168203,10.460531 H 11.792904 Z M 8.153198,9.2728377 9.7075988,5.8246951 11.256526,9.2728377 Z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2092px;line-height:1.25;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';stroke-width:0.131357"
+       id="path1583" />
+    <path
+       d="m 17.145735,11.949253 c 1.78975,0 3.147114,-1.007076 3.147114,-2.5724237 0,-1.3902035 -1.083702,-2.0634123 -2.479378,-2.6764155 -1.072756,-0.4597523 -1.888269,-0.7060482 -1.888269,-1.3956767 0,-0.6239496 0.645843,-1.1274879 1.455883,-1.1274879 0.640369,0 1.247899,0.3338678 1.521561,0.9304512 L 19.931615,4.3961789 C 19.570381,3.427415 18.628984,2.8198852 17.370138,2.8198852 c -1.58724,0 -2.840613,1.0070765 -2.840613,2.4520125 0,1.3847302 1.149381,1.9211079 2.183824,2.3808603 1.02897,0.4433326 2.189297,0.9359244 2.189297,1.7514375 0,0.6732085 -0.749834,1.1493805 -1.740491,1.1493805 -0.848353,0 -1.581767,-0.394073 -1.975841,-1.0837016 l -1.094648,0.7826736 c 0.503538,1.018023 1.60366,1.696705 3.054069,1.696705 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2092px;line-height:1.25;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';stroke-width:0.131357"
+       id="path1585" />
+    <path
+       d="m 30.0188,2.7870457 -4.214396,6.4146398 -4.21987,-6.4146398 h -0.103992 v 9.0144303 h 1.384731 V 6.9029238 l 2.933657,4.7507742 h 0.01095 l 2.928184,-4.7453009 v 4.8930789 h 1.384731 V 2.7870457 Z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2092px;line-height:1.25;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';stroke-width:0.131357"
+       id="path1587" />
+    <path
+       d="m 37.976895,11.801476 h 1.499668 L 35.327845,2.7979922 h -0.0821 l -4.148718,9.0034838 h 1.499669 l 0.602056,-1.340945 h 4.176084 z M 33.735132,9.2728377 35.289533,5.8246951 36.83846,9.2728377 Z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2092px;line-height:1.25;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';stroke-width:0.131357"
+       id="path1589" />
+  </g>
+</svg>

@@ -1,29 +1,19 @@
-import time
+import eel
 
-import pywhatkit
-from instabot import Bot
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+import pywhatkit
 
-
-def whats_app(number, message, hour, minute):
+def whatsapp(number, message, hour, minute):
     pywhatkit.sendwhatmsg(number, message, hour, minute)
 
-
-def twitter(message):
-    def account_info():
-        with open('account_info.txt', 'r') as f:
-            info = f.read().split()
-            email = info[0]
-            password = info[1]
-        return email, password
-
-    email, password = account_info()
+def twitter(email,password, message):
 
     options = Options()
     options.add_argument("start.maximized")
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome('C:\chrome\chromedriver.exe')
 
     driver.get('https://www.twitter.com/login')
 
@@ -49,10 +39,23 @@ def twitter(message):
     driver.find_element_by_xpath(message_xpath).send_keys(message)
     time.sleep(0.5)
     driver.find_element_by_xpath(send_xpath).click()
+    time.sleep(5)
+    driver.quit()
 
-def instagram(Username,Password,picture,Caption):
-    bot = Bot()
-    bot.login(username=Username, password=Password)
+eel.init('web')
 
-    bot.upload_photo(picture, caption=Caption)
+@eel.expose
+def dummy(message,time,social,user,passw,ph_no):
+    ti=time.split(':')
+    if social=='Whatsapp':
+       whatsapp(ph_no,message,int(ti[0]),int(ti[1]))
+       return(0)
+    elif social=='Twitter':
+        twitter(user,passw,message)
+        return(0)
+    else:
+        #instagram(user,passw,message,message)
+        pass
+        
 
+eel.start('index.html',size=(1000,800))
