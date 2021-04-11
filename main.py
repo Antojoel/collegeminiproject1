@@ -5,6 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 import pywhatkit
+from insta import instagram
+from timedelta import timed
 
 def whatsapp(number, message, hour, minute):
     pywhatkit.sendwhatmsg(number, message, hour, minute)
@@ -45,17 +47,19 @@ def twitter(email,password, message):
 eel.init('web')
 
 @eel.expose
-def dummy(message,time,social,user,passw,ph_no):
-    ti=time.split(':')
+def dummy(message,social,user,passw,ph_no,doc,time):
     if social=='Whatsapp':
-       whatsapp(ph_no,message,int(ti[0]),int(ti[1]))
-       return(0)
+        ti=time.split(':')
+        whatsapp(ph_no,message,int(ti[0]),int(ti[1]))
+        return(0)
     elif social=='Twitter':
+        timed(time)
         twitter(user,passw,message)
         return(0)
     else:
-        #instagram(user,passw,message,message)
-        pass
+        timed(time)
+        return(instagram(user,passw,doc,message))
+        
         
 
 eel.start('index.html',size=(1000,800))
