@@ -145,18 +145,20 @@
                                     $(document).ready(function() {
                                         $(".hide").hide();
                                         $(".show").show();
+                                        $("#check").show();
                                     });
                                 } else if (x == "Instagram") {
                                     $(document).ready(function() {
                                         $(".hide").show();
                                         $(".show").hide();
-                                        $('#file').show();
+                                        $("#check").hide();
                                     });
                                 } else if (x == "Twitter") {
                                     $(document).ready(function() {
                                         $(".hide").show();
                                         $(".show").hide();
-                                        $('#file').hide();
+                                        $("#check").show();
+                                        $("#file").hide();
                                     });
                                 }
                             }
@@ -164,7 +166,7 @@
 
                         <div class="form-group show" id="cname ">
                             <input type="text" id="number" class="form-control-input " required>
-                            <label class="label-control " for="cname ">Whatsapp Number</label>
+                            <label class="label-control " for="cname ">Contact Name</label>
                             <div class="help-block with-errors "></div>
                         </div>
 
@@ -184,10 +186,14 @@
                             <label class="label-control " for="cmessage ">Your message</label>
                             <div class="help-block with-errors "></div>
                         </div>
-
-                        <div class="form-group hide">
-                            <input type="text" id="file" required>
-                            <label class="label-control " for="cmessage ">File</label>
+                        <div class="form-group" id="name">
+                            <div class="form-check-inline show" id="check">
+                                <input class="form-check-input" type="checkbox" id="fcheck" onchange="check()">
+                            </div>
+                            <div class="form-check-inline hide" id="file">
+                                <input type="text" id="file-name">
+                            </div>
+                            <label class="label-control " for="cmessage ">File Path</label>
                             <div class="help-block with-errors "></div>
                         </div>
                         <div class="form-group ">
@@ -197,9 +203,24 @@
                         </div>
 
                         <div class="form-group ">
-                            <button type="submit" onclick="take_details();" class="form-control-submit-button ">SUBMIT MESSAGE</button>
+                            <button type="submit" onclick="take_details();" class="form-control-submit-button ">SEND MESSAGE</button>
                         </div>
                         <script>
+                            function check(){
+                                console.log("function");
+                                var cb = document.getElementById("fcheck").checked;
+                                if (cb){
+                                    $(document).ready(function(){
+                                        $("#file").show();
+                                    });
+                                } 
+                                else{
+                                    $(document).ready(function(){
+                                        $("#file").hide();
+                                    });
+                                }
+                                
+                            }
                             function take_details() {
                                 var username = document.getElementById("name").value;
                                 var password = document.getElementById("pass").value;
@@ -208,6 +229,8 @@
                                 var time=document.getElementById('time').value;
                                 var social=document.getElementById('contactForm').value;
                                 var file=document.getElementById('file').value;
+                                var check=document.getElementById('fcheck').value;
+                                console.log(check);
                                 eel.dummy(message,social,username,password,number,file,time)(function(ret){if (ret==1){alert("upload finished");} if (ret==2){alert("Image is not in correct size");}})
                             }
                         </script>
