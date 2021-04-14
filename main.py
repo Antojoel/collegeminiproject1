@@ -4,13 +4,13 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-from whatsap import whatsapp
+from whatsap import message
 from twitter import tweet
 from insta import instagram
 from timedelta import timed
 
-def whatsapp(contact, message,doc):
-    whatsapp(contact,message,doc)
+def whatsapp(contact, mesage,doc):
+    message(contact,mesage,doc)
 
 
 def twitter(email,passw, message,doc):
@@ -34,4 +34,4 @@ def dummy(message,social,user,passw,contact,doc,time):
         
         
 
-eel.start('index.html',size=(1000,800))
+eel.start('index.html',size=(1200,1000))

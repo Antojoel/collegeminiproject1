@@ -4,14 +4,16 @@ from selenium.webdriver.common.keys import Keys
 import time
 import os
 
-def tweet (email,password,message,filen="cd")
+def tweet (email,password,message,filen):
     dir_path = os.getcwd()
     options = webdriver.ChromeOptions()
+    print(filen)
 
-    if os.path.isabs(filen):
-        filep=filen
-    else:
-        filep=os.path.join(dir_path,filen)
+    if filen!=None:
+        if os.path.isabs(filen):
+            filep=filen
+        else:
+            filep=os.path.join(dir_path,filen)
 
     driver = webdriver.Chrome('C:\chrome\chromedriver.exe',chrome_options=options)
 
@@ -35,7 +37,7 @@ def tweet (email,password,message,filen="cd")
 
     driver.find_element_by_xpath(message_xpath).send_keys(message)
     time.sleep(0.5)
-    if filen!="cd":
+    if filen!=None:
         driver.find_element_by_xpath(media).send_keys(filep)
         time.sleep(0.5)
     driver.find_element_by_xpath(tweet).click()

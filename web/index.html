@@ -197,7 +197,7 @@
                             <div class="help-block with-errors "></div>
                         </div>
                         <div class="form-group ">
-                            <input type="time" id="time" required>
+                            <input type="time" id="time" >
                             <label class="label-control " for="cmessage ">Time</label>
                             <div class="help-block with-errors "></div>
                         </div>
@@ -229,7 +229,7 @@
                                 var time=document.getElementById('time').value;
                                 var social=document.getElementById('contactForm').value;
                                 var file=document.getElementById('file').value;
-                                var check=document.getElementById('fcheck').value;
+                                var check=document.getElementById('fcheck').checked;
                                 console.log(check);
                                 eel.dummy(message,social,username,password,number,file,time)(function(ret){if (ret==1){alert("upload finished");} if (ret==2){alert("Image is not in correct size");}})
                             }
