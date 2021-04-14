@@ -20,7 +20,6 @@ eel.init('web')
 
 @eel.expose
 def dummy(message,social,user,passw,contact,doc,time):
-    #rdoc=r"{}".format(doc)
     if social=='Whatsapp':
         timed(time)
         whatsapp(contact,message,doc)
