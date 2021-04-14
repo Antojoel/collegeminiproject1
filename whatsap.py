@@ -6,17 +6,19 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-def whatsapp(contact,message,filen="cd")
+def message(contact,text,filen):
         dir_path = os.getcwd()
         profile = os.path.join(dir_path, "profile", "wpp")
         options = webdriver.ChromeOptions()
         options.add_argument(
                 r"user-data-dir={}".format(profile))
 
-        if os.path.isabs(filen):
-                filep=filen
-        else:
-                filep=os.path.join(dir_path,filen)
+        if filen!=None:
+                print(1)
+                if os.path.isabs(filen):
+                        filep=filen
+                else:
+                        filep=os.path.join(dir_path,filen)
 
         driver = webdriver.Chrome("c:\chrome\chromedriver.exe", chrome_options=options)
 
@@ -37,9 +39,10 @@ def whatsapp(contact,message,filen="cd")
         time.sleep(2)
 
         input_box.send_keys(text + Keys.ENTER)
-        time.sleep(5)
+        time.sleep(1)
         
-        if filen!="cd":
+        if filen!=None:
+                print(2)
                 attach='//*[@id="main"]/footer/div[1]/div[1]/div[2]/div/div'
                 input_xpath ='//input[@accept="image/*,video/mp4,video/3gpp,video/quicktime"][@type="file"]'
                 send='//*[@id="app"]/div[1]/div[1]/div[2]/div[2]/span/div[1]/span/div[1]/div/div[2]/span/div/div'
@@ -49,5 +52,5 @@ def whatsapp(contact,message,filen="cd")
                 driver.find_element_by_xpath(input_xpath).send_keys(filep)
                 time.sleep(10)
                 driver.find_element_by_xpath(send).click()
-        time.sleep(10)
+        time.sleep(5)
         driver.quit()
