@@ -124,14 +124,14 @@
 
 
     <!-- Services -->
-    <div id="services" class="cards-1">
+    <div id="services" class="cards-1 needs-validation" novalidate>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <h3> Send Automated message </h3>
                     <!-- Contact Form -->
                     <form data-toggle="validator" data-focus="false ">
-                        <select id="contactForm" class="form-select" onchange="myFunction()" aria-label="Default select example">
+                        <select id="contactForm" class="form-select" onchange="myFunction()" aria-label="Default select example" required>
                             <option selected> Select-Social media </option>
                             <option value="Instagram"> INSTAGRAM </option>
                             <option value="Twitter"> TWITTER </option>
@@ -167,24 +167,33 @@
                         <div class="form-group show" id="cname ">
                             <input type="text" id="number" class="form-control-input " required>
                             <label class="label-control " for="cname ">Contact Name</label>
-                            <div class="help-block with-errors "></div>
+                            <div class="help-block with-errors ">Please enter contact Name</div>
                         </div>
 
                         <div class="form-group hide">
                             <input type="text" id="name" class="form-control-input " required>
                             <label class="label-control" for="cname ">Username</label>
-                            <div class="help-block with-errors "></div>
+                            <div class="help-block with-errors ">Please enter Username</div>
+                            <dvi class="invalid-feedback">
+                                Please enter User Name
+                            </dvi>
                         </div>
                         <div class="form-group hide">
                             <input type="password" id="pass" class="form-control-input " required>
                             <label class="label-control " for="cemail ">Password</label>
-                            <div class="help-block with-errors "></div>
+                            <div class="help-block with-errors ">Please enter Password</div>
+                            <div class="invalid-feedback">
+                                Please enter password
+                            </div>
                         </div>
 
                         <div class="form-group ">
                             <textarea class="form-control-textarea " id="message" required></textarea>
                             <label class="label-control " for="cmessage ">Your message</label>
-                            <div class="help-block with-errors "></div>
+                            <div class="help-block with-errors ">Please enter message</div>
+                            <div class="invalid-feedback">
+                                Please enter message
+                            </div>
                         </div>
                         <div class="form-group" id="name">
                             <div class="form-check-inline show" id="check">
@@ -193,11 +202,15 @@
                             <div class="form-check-inline hide" id="file">
                                 <input type="text" id="file-name">
                             </div>
-                            <label class="label-control " for="cmessage ">File Path</label>
+                            <label class="label-control " for="cmessage">File Path</label>
                             <div class="help-block with-errors "></div>
                         </div>
                         <div class="form-group ">
+<<<<<<< HEAD
                             <input type="time" id="time" >
+=======
+                            <input type="time" id="time">
+>>>>>>> 6e9760473a87b96aa419c2a069946edeef03a0a2
                             <label class="label-control " for="cmessage ">Time</label>
                             <div class="help-block with-errors "></div>
                         </div>

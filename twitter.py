@@ -39,6 +39,7 @@ def tweet (email,password,message,filen):
     time.sleep(0.5)
     if filen!=None:
         driver.find_element_by_xpath(media).send_keys(filep)
-        time.sleep(0.5)
+        time.sleep(3)
     driver.find_element_by_xpath(tweet).click()
     time.sleep(5)
+    driver.quit()
